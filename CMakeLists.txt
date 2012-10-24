@@ -31,6 +31,9 @@ set( OpenCV_LIBS opencv_core
   opencv_flann )
 
 # OpenCV code
+add_executable( getData GetDataApp.cpp GetData.cpp GetData.h )
+target_link_libraries( getData ${OpenCV_LIBS} )
+
 add_executable(  billibotTest ${billibot_srcs} ${billibot_hdrs} )
 target_link_libraries( billibotTest ${OpenCV_LIBS} )
   
