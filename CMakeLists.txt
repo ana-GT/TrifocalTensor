@@ -9,11 +9,6 @@ include_directories( .
 
 link_directories( /usr/local/lib )
 
-set( billibot_srcs billibotTest.cpp trifocalTensor.cpp )
-set( billibot_hdrs trifocalTensor.h )
-set( personal_srcs personalTest.cpp trifocalTensor.cpp )
-set( personal_hdrs trifocalTensor.h )
-
 set( OpenCV_LIBS opencv_core
   opencv_ml
   opencv_video
@@ -31,11 +26,8 @@ set( OpenCV_LIBS opencv_core
   opencv_flann )
 
 # OpenCV code
-add_executable( getData GetDataApp.cpp GetData.cpp GetData.h )
-target_link_libraries( getData ${OpenCV_LIBS} )
+#add_executable( getData GetDataApp.cpp GetData.cpp GetData.h )
+#target_link_libraries( getData ${OpenCV_LIBS} )
 
-add_executable(  billibotTest ${billibot_srcs} ${billibot_hdrs} )
-target_link_libraries( billibotTest ${OpenCV_LIBS} )
-  
-#add_executable(  personalTest ${personal_srcs} ${personal_hdrs} )
-#target_link_libraries( personalTest ${OpenCV_LIBS} )
+add_executable(  Assignment4 Assignment4.cpp Tensor3D.cpp Tensor3D.h )
+target_link_libraries( Assignment4 ${OpenCV_LIBS} )
